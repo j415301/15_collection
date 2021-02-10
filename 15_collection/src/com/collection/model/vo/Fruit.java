@@ -1,5 +1,7 @@
 package com.collection.model.vo;
 
+import java.util.Objects;
+
 public class Fruit implements Comparable<Fruit>{
 	
 	private String name;
@@ -66,6 +68,11 @@ public class Fruit implements Comparable<Fruit>{
 			}
 		}
 		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(name,origin,brix,price);
 	}
 	
 	@Override
